@@ -79,7 +79,7 @@
             <div class="row">
                 <div class="col-lg-5 mt-5">
                     <div class="card mb-3">
-                        <img class="card-img img-fluid" src="assets/img/Terreneitor.jpg" style="height: 300px;">
+                        <img id="mainImage" class="card-img img-fluid" src="assets/img/Terreneitor.jpg" style="height: 300px;">
                     </div>
                     <div class="row">
                         <div class="col-1 align-self-center">
@@ -88,31 +88,32 @@
                                 <span class="sr-only">Anterior</span>
                             </a>
                         </div>
-                        <div id="multi-item-example" class="col-10 carousel slide carousel-multi-item"
-                            data-bs-ride="carousel">
+    
+                        <div id="multi-item-example" class="col-10 carousel slide carousel-multi-item" data-bs-ride="carousel">
                             <div class="carousel-inner product-links-wap" role="listbox">
                                 <div class="carousel-item active">
                                     <div class="row">
+                                        <!-- Miniaturas con funcionalidad para cambiar la imagen principal -->
                                         <div class="col-4">
-                                            <a href="#">
+                                            <a href="#" onclick="changeImage('assets/img/terreneitor 2.jpg')">
                                                 <img class="card-img img-fluid" src="assets/img/terreneitor 2.jpg" style="height: 107px;">
                                             </a>
                                         </div>
                                         <div class="col-4">
-                                            <a href="#">
+                                            <a href="#" onclick="changeImage('assets/img/terreneitor 3.jpg')">
                                                 <img class="card-img img-fluid" src="assets/img/terreneitor 3.jpg" style="height: 107px;">
                                             </a>
                                         </div>
                                         <div class="col-4">
-                                            <a href="#">
-                                                <img class="card-img img-fluid" src="assets/img/terreneitor 4.jpg">
+                                            <a href="#" onclick="changeImage('assets/img/terreneitor 4.jpg')">
+                                                <img class="card-img img-fluid" src="assets/img/terreneitor 4.jpg" style="height: 107px;">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
+
                         <div class="col-1 align-self-center">
                             <a href="#multi-item-example" role="button" data-bs-slide="next">
                                 <i class="text-dark fas fa-chevron-right"></i>
@@ -121,6 +122,7 @@
                         </div>
                     </div>
                 </div>
+    
                 <div class="col-lg-7 mt-5">
                     <div class="card">
                         <div class="card-body">
@@ -134,7 +136,7 @@
                                 <i class="text-warning fas fa-star-half-alt"></i>
                                 <span class="list-inline-item text-dark">Rating 4.8 | 40 Comentarios</span>
                             </p>
-
+    
                             <h6><b>Descripción:</b></h6>
                             <p>El mejor regalo para niños: con función anticolisión y anticaída. ¡Puede salir a jugar con su hijo, estimular la naturaleza lúdica del niño y darle la mejor compañía!</p>
                             <ul class="list-inline">
@@ -145,27 +147,26 @@
                                     <p class="text-muted"><strong>Negro / Azul</strong></p>
                                 </li>
                             </ul>
-
+    
                             <h6><b>Especificacion:</b></h6>
                             <ul class="list-unstyled pb-3">
                                 <li>
                                     Fabricante: Genérica
                                     <br>
-                                    Modelo: Remote control car,Toy car
+                                    Modelo: Remote control car, Toy car
                                     <br>
                                     Versión: Controle Remoto
                                     <br>
                                     Velocidad máxima: 15 km/h
                                     <br>
-                                    Incluye pilas:Sí
+                                    Incluye pilas: Sí
                                     <br>
                                     Tipo de pilas del control remoto: AAA
                                     <br>
                                     Edad recomendada: 12 años o más
                                 </li>
-
                             </ul>
-
+    
                             <form action="" method="GET">
                                 <input type="hidden" name="product-title" value="Activewear">
                                 <div class="row">
@@ -173,34 +174,34 @@
                                         <ul class="list-inline pb-3">
                                             <li class="list-inline-item text-right">
                                                 Cantidad
-                                                <input type="hidden" name="product-quanity" id="product-quanity"
-                                                    value="1">
+                                                <input type="hidden" name="product-quanity" id="product-quanity" value="1">
                                             </li>
-                                            <li class="list-inline-item"><span class="btn btn-success"
-                                                    id="btn-minus">-</span></li>
-                                            <li class="list-inline-item"><span class="badge bg-secondary"
-                                                    id="var-value">1</span></li>
-                                            <li class="list-inline-item"><span class="btn btn-success"
-                                                    id="btn-plus">+</span></li>
+                                            <li class="list-inline-item"><span class="btn btn-success" id="btn-minus">-</span></li>
+                                            <li class="list-inline-item"><span class="badge bg-secondary" id="var-value">1</span></li>
+                                            <li class="list-inline-item"><span class="btn btn-success" id="btn-plus">+</span></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="row pb-3">
                                     <div class="col d-grid">
-                                        <button type="submit" class="btn btn-success btn-lg" name="submit"
-                                            value="buy">Comprar</button>
+                                        <button type="submit" class="btn btn-success btn-lg" name="submit" value="buy">Comprar</button>
                                     </div>
-
                                 </div>
                             </form>
-
+    
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+    
+    <script>
+        // Función para cambiar la imagen principal
+        function changeImage(imageSrc) {
+            document.getElementById("mainImage").src = imageSrc;
+        }
+    </script>    
 
     <!-- fin cuerpo-->
 
