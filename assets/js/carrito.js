@@ -122,12 +122,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 // Obtén el contador del almacenamiento local
     let visitas = localStorage.getItem('contadorVisitas');
+   
 // Si no hay visitas almacenadas, inicializa a 0
     if (!visitas) {
         visitas = 0;
+        
     }
 // Incrementa el contador
-    visitas++;
+    
+        visitas++;
+  
+    
 // Guarda el nuevo contador en el almacenamiento local
     localStorage.setItem('contadorVisitas', visitas);
 // Muestra el contador en la página
