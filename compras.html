@@ -58,7 +58,7 @@
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="index.html" onclick="visitar();">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="acercade.html">A cerca de </a>
@@ -108,7 +108,7 @@
         <div class="row">
 
             <div class="col-lg-3">
-                <h1 class="h2 pb-4">Categorias</h1>
+               
                 <ul class="list-unstyled templatemo-accordion">
                     <li class="pb-3">
                         <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
@@ -119,13 +119,13 @@
                             <li><a class="text-decoration-none" href="#">
                                     <details>
                                         <summary>Hombres</summary>
-                                        <p>Nuestras colecciones están diseñadas para todos</p>
+                                        <!--<p>Nuestras colecciones están diseñadas para todos</p>-->
                                     </details>
                                 </a></li>
                             <li><a class="text-decoration-none" href="#">
                                     <details>
                                         <summary>Mujeres</summary>
-                                        <p>Descubre los sombreros para mujer ideales para cada temporada del año.</p>
+                                        <!--<p>Descubre los sombreros para mujer ideales para cada temporada del año.</p>-->
                                     </details>
                                 </a></li>
                         </ul>
@@ -139,8 +139,8 @@
                             <li><a class="text-decoration-none" href="#">
                                     <details>
                                         <summary>Ventas</summary>
-                                        <p>Envíos Gratis en el día ✓ Compre Sombrero en cuotas sin interés! ✓ Conozca
-                                            nuestras increíbles ofertas y promociones en millones de ✓ productos.</p>
+                                        <!--<p>Envíos Gratis en el día ✓ Compre Sombrero en cuotas sin interés! ✓ Conozca
+                                            nuestras increíbles ofertas y promociones en millones de ✓ productos.</p>-->
                                     </details>
                                 </a></li>
 
@@ -155,7 +155,7 @@
                             <li><a class="text-decoration-none" href="#">
                                     <details>
                                         <summary>Productos</summary>
-                                        <p>En ProdArt, la calidad en nuestros productos es una obligación.</p>
+                                        <!--<p>En ProdArt, la calidad en nuestros productos es una obligación.</p>-->
                                     </details>
                                 </a></li>
 
@@ -166,18 +166,24 @@
 
             <div class="col-lg-9">
                 <div class="row">
-
+                   
                     <div class="col-md-6 pb-4">
+                        
                         <div class="d-flex">
-                            <select id="filtro" class="form-control">
-                                <option value="todas">Todas</option>
-                                <option value="sombreros">Sombreros</option>
-                                <option value="mochilas">Mochilas</option>
-                                <option value="bolsos">Bolsos</option>
-                                <option value="hamacas">Hamacas</option>
-                                <option value="plateria">Platería</option>
-
-                            </select>
+                            <div> <h3 class="h2 pb-4">Categorias:</h3></div>
+                            <div>
+                                <select id="filtro" class="form-control">
+                                    <option value="todas">Todas</option>
+                                    <option value="sombreros">Sombreros</option>
+                                    <option value="mochilas">Mochilas</option>
+                                    <option value="bolsos">Bolsos</option>
+                                    <option value="hamacas">Hamacas</option>
+                                    <option value="plateria">Platería</option>
+                                    <option value="juguetes">Juguetes</option>
+    
+                                </select>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -293,6 +299,7 @@
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/carrito.js"></script>
+    <script src="assets/js/contadorvisitas.js"></script>
 
 </body>
 

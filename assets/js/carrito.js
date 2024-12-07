@@ -1,78 +1,91 @@
 
 //DOM
-document.addEventListener('DOMContentLoaded', () => { 
+document.addEventListener('DOMContentLoaded', () => {
     // Variables
+    var nuevaVisita = true;
+
     const baseDeDatos = [
         {
             id: 1,
             nombre: 'Terreneitor: El Rey',
             precio: 156370,
-            imagen: './assets/img/Terreneitor.jpg'
+            imagen: './assets/img/Terreneitor.jpg',
+            categoria: 'juguetes'
         },
         {
             id: 3,
             nombre: 'Mochilas Tejidas',
             precio: 270000,
-            imagen: 'assets/img/mochila.jpg'
+            imagen: 'assets/img/mochila.jpg',
+            categoria: 'mochilas'
         },
         {
             id: 2,
             nombre: 'Mochilas wayuu',
             precio: 270,
-            imagen: 'assets/img/mochila.jpg'
+            imagen: 'assets/img/mochila.jpg',
+            categoria: 'mochilas'
         },
         {
             id: 4,
             nombre: '',
             precio: 0,
-            imagen: ''
+            imagen: '',
+            categoria: 'hombre'
         }
         ,
         {
             id: 5,
             nombre: '',
             precio: 0,
-            imagen: ''
+            imagen: '',
+            categoria: 'hombre'
         }
         ,
         {
             id: 6,
             nombre: '',
             precio: 0,
-            imagen: ''
+            imagen: '',
+            categoria: 'mujer'
         }
         ,
         {
             id: 7,
             nombre: '',
             precio: 0,
-            imagen: ''
+            imagen: '',
+            categoria: 'mujer'
         }
         ,
         {
             id: 8,
             nombre: '',
             precio: 0,
-            imagen: ''
+            imagen: '',
+            categoria: 'mujer'
         },
         {
             id: 9,
             nombre: 'Figuras de Mario y Luigi',
             precio: 800000,
-            imagen: 'assets/img/marioluigi.jpg'
+            imagen: 'assets/img/marioluigi.jpg',
+            categoria: 'mujer'
         }
         ,
         {
             id: 10,
             nombre: 'Mystery Box',
             precio: 550000,
-            imagen: 'assets/img/Box.png'
+            imagen: 'assets/img/Box.png',
+            categoria: 'mujer'
         },
         {
             id: 11,
             nombre: '',
             precio: 0,
-            imagen: ''
+            imagen: '',
+            categoria: 'mujer'
         }
     ];
 
@@ -90,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderizarProductos() {
         DOMitems.innerHTML = "";
         const filtro = filtroSelect.value;
-        const productosFiltrados = baseDeDatos.filter(producto => 
+        const productosFiltrados = baseDeDatos.filter(producto =>
             filtro === "todas" || producto.categoria === filtro
         );
         productosFiltrados.forEach((info) => {
@@ -120,23 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
             DOMitems.appendChild(miNodo);
         });
     }
-// Obtén el contador del almacenamiento local
-    let visitas = localStorage.getItem('contadorVisitas');
-   
-// Si no hay visitas almacenadas, inicializa a 0
-    if (!visitas) {
-        visitas = 0;
-        
-    }
-// Incrementa el contador
     
-        visitas++;
-  
-    
-// Guarda el nuevo contador en el almacenamiento local
-    localStorage.setItem('contadorVisitas', visitas);
-// Muestra el contador en la página
-    document.getElementById('contador').textContent = visitas;
     function anadirProductoAlCarrito(evento) {
         carrito.push(evento.target.getAttribute('marcador'));
         renderizarCarrito();
@@ -214,4 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cargarCarritoDeLocalStorage();
     renderizarProductos();
     renderizarCarrito();
+
+
+
 });
