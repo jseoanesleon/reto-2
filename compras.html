@@ -223,7 +223,7 @@
                         const DOMcarrito = document.querySelector('#carrito');
                         const DOMtotal = document.querySelector('#total');
                         const DOMbotonVaciar = document.querySelector('#boton-vaciar');
-
+                        DOMbotonVaciar.addEventListener('click', vaciarCarrito);
 
                         //seccion de funciones 
                         /*
@@ -335,11 +335,30 @@
 
                             handleCarritoValue(carrito.length)
                         }
+
+                        function vaciarCarrito() {
+                            carrito = [];
+                            renderizarCarrito();
+                            localStorage.clear();
+                        }
+
+                        function guardarCarritoEnLocalStorage() {
+                            miLocalStorage.setItem('carrito', JSON.stringify(carrito));
+                        }
+
+                        function cargarCarritoDeLocalStorage() {
+                            if (miLocalStorage.getItem('carrito') !== null) {
+                                carrito = JSON.parse(miLocalStorage.getItem('carrito'));
+                                handleCarritoValue(carrito.length);
+                            }
+                        }
+
                         renderizarProductos();
                         renderizarCarrito();
                     });
                 </script>
                 <!-- fin de productos -->
+
                 <!-- carrito -->
                 <div class="container">
                     <div class="row">
@@ -353,8 +372,12 @@
                             <hr>
                             <!-- Precio total -->
                             <p class="text-right">Total: $ <span id="total"></span></p>
+                            <button id="" class="btn btn-info"> <a href="pago.html"
+                                    target="target_blank">Pagar</a></button>
+                            <button id="" class="btn btn-info"> <a
+                                    href="https://www.paypal.com/invoice/p/#X9AMTLCL84389TKX"
+                                    target="target_blank">PyPal</a></button>
                             <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
-                            <button id="" class="btn btn-info">Pagar</button>
                         </aside>
                     </div>
                 </div>
@@ -423,6 +446,11 @@
 
     <!-- archivos js-->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/carrito.js"></script>
 
 </body>
 
